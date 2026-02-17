@@ -90,9 +90,7 @@ async function getLastEmail() {
 }
 
 function extractUUID(text) {
-  const match = text.match(
-    /[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/,
-  );
+  const match = text.match(/[0-9a-fA-F-]{36}/);
   return match ? match[0] : null;
 }
 
