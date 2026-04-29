@@ -7,6 +7,7 @@ import authorization from "models/authorization";
 const router = createRouter();
 
 router.post(postHandler);
+router.use(controller.injectAnonymousOrUser);
 router.delete(deleteHandler);
 
 export default router.handler(controller.errorHandlers);
